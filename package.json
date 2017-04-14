@@ -1,0 +1,30 @@
+{
+  "name": "lwm2m-codec",
+  "version": "0.0.0",
+  "description": "A codec for lightweight M2M (LWM2M) data formats.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "busyman": "^0.3.0",
+    "lwm2m-id": "^1.6.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  },
+  "scripts": {
+    "test": "make test-all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PeterEB/lwm2m-codec.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PeterEB/lwm2m-codec/issues"
+  },
+  "homepage": "https://github.com/PeterEB/lwm2m-codec"
+}
