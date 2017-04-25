@@ -17,7 +17,7 @@ Please visit the [Wiki](https://github.com/PeterEB/lwm2m-codec/wiki).
 
 ## Installation
 
-
+> $ npm install lwm2m-codce --save  
 
 <br />
 
