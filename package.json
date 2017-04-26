@@ -1,6 +1,6 @@
 {
   "name": "lwm2m-codec",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A codec for lightweight M2M (LWM2M) data formats.",
   "main": "index.js",
   "directories": {
@@ -8,8 +8,6 @@
   },
   "dependencies": {
     "busyman": "^0.3.0",
-    "concentrate": "^0.2.3",
-    "dissolve-chunks": "^1.3.0",
     "lwm2m-id": "^1.6.2"
   },
   "devDependencies": {
