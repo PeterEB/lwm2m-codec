@@ -23,12 +23,31 @@ Please visit the [Wiki](https://github.com/PeterEB/lwm2m-codec/wiki).
 
 ## Usage
 
+TLV:
+
 ```js
 var lwCodec = require(lwm2m-codec);
 
-lwCodec.encode('tlv', '/3303/0', {5700: 31, 5701: 'c'});
-lwCodec.encode('temperature', '/3303/0', {5700: 31, 5701: 'c'});
-// Buffer [0x08, 0x00, 0x0b, 0xe4, 0x16, 0x44, 0x41, 0xf8, 0x00, 0x00, 0xe1, 0x16, 0x45, 0x63];
+lwCodec.encode('tlv', '/3303/0', { 5700: 31, 5701: 'c' });
+lwCodec.encode('tlv', '/temperature/0', { 5700: 31, 5701: 'c' });
+lwCodec.encode('tlv', '/temperature/0', { sensorValue: 31, units: 'c' });
+// Buffer <0x08, 0x00, 0x0b, 0xe4, 0x16, 0x44, 0x41, 0xf8, 0x00, 0x00, 0xe1, 0x16, 0x45, 0x63>;
+
+lwCodec.decode('tlv', '/3303/0', new Buffer ([0x08, 0x00, 0x0b, 0xe4, 0x16, 0x44, 0x41, 0xf8, 0x00, 0x00, 0xe1, 0x16, 0x45, 0x63]));
+// { sensorValue: 31, units: 'c' }
+
+JSON:
+```js
+var lwCodec = require(lwm2m-codec);
+
+lwCodec.encode('json', '/3303/0', { 5700: 31, 5701: 'c' });
+lwCodec.encode('json', '/temperature/0', { 5700: 31, 5701: 'c' });
+lwCodec.encode('json', '/temperature/0', { sensorValue: 31, units: 'c' });
+// Buffer <7b 22 62 6e 22 3a 22 2f 33 33 30 33 2f 30 22 2c 22 65 22 3a 5b 7b 22 6e 22 3a 22 35 37 30 30 22 2c 22 76 22 3a 33 31 7d 2c 7b 22 6e 22 3a 22 35 37 30 31 22 2c 22 73 76 22 3a 22 63 22 7d 5d 7d 0d>;
+// String {"bn":"/3303/0","e":[{"n":"5700","v":31},{"n":"5701","sv":"c"}]} 
+
+lwCodec.decode('json', '/3303/0', new Buffer ([7b 22 62 6e 22 3a 22 2f 33 33 30 33 2f 30 22 2c 22 65 22 3a 5b 7b 22 6e 22 3a 22 35 37 30 30 22 2c 22 76 22 3a 33 31 7d 2c 7b 22 6e 22 3a 22 35 37 30 31 22 2c 22 73 76 22 3a 22 63 22 7d 5d 7d 0d]));
+// { sensorValue: 31, units: 'c' }
 
 ```
 
@@ -37,9 +56,3 @@ lwCodec.encode('temperature', '/3303/0', {5700: 31, 5701: 'c'});
 ## License
 
 Licensed under [MIT](https://github.com/PeterEB/lwm2m-codec/blob/master/LICENSE).
-
-
-
-
-
-encode will transforn path into ipso numerical id
