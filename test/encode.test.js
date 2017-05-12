@@ -1,5 +1,6 @@
 var expect = require('chai').expect,
     encode = require('../lib/encode.js'),
+    decode = require('../lib/decode.js'),
     cutils = require('../lib/cutils.js');
     
 describe('encode - Functional Check', function () {
