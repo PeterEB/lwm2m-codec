@@ -1,6 +1,12 @@
 # lwm2m-codec
 A codec for lightweight M2M (LWM2M) data formats.
 
+[![NPM](https://nodei.co/npm/lwm2m-codec.png?downloads=true)](https://nodei.co/npm/lwm2m-codec/)  
+
+[![Build Status](https://travis-ci.org/PeterEB/lwm2m-codec.svg?branch=develop)](https://travis-ci.org/PeterEB/lwm2m-codec)
+[![npm](https://img.shields.io/npm/v/lwm2m-codec.svg?maxAge=2592000)](https://www.npmjs.com/package/lwm2m-codec)
+[![npm](https://img.shields.io/npm/l/lwm2m-codec.svg?maxAge=2592000)](https://www.npmjs.com/package/lwm2m-codec)
+
 <br />
 
 ## Documentation  
@@ -11,7 +17,7 @@ Please visit the [Wiki](https://github.com/PeterEB/lwm2m-codec/wiki).
 
 ## Overview
 
-
+A codec for lightweight M2M (LWM2M) data formats.
 
 <br />
 
