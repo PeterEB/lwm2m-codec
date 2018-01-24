@@ -1,6 +1,6 @@
 {
   "name": "lwm2m-codec",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "A codec for lightweight M2M (LWM2M) data formats.",
   "main": "index.js",
   "directories": {
